@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1749446042713778656}
   - component: {fileID: 4792897505818761008}
   - component: {fileID: 8328096974705405866}
+  - component: {fileID: 6111347256490877370}
   m_Layer: 0
   m_Name: whiteblock
-  m_TagString: Block
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749446042713778658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.99, y: 2.24, z: 0}
-  m_LocalScale: {x: 0.8739864, y: 0.21227117, z: 1}
+  m_LocalPosition: {x: -5.517, y: 2.256, z: 0}
+  m_LocalScale: {x: 0.4369932, y: 0.18308389, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b36c3d89397deed42903df81a22376d1, type: 3}
-  m_Color: {r: 0.9811321, g: 0.92158043, b: 0.5229619, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -131,3 +132,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &6111347256490877370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749446042713778658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7881eb79ac76934fac709009ea8fd8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

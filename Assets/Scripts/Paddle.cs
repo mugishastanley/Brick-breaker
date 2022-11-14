@@ -18,7 +18,7 @@ public class Paddle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
+        movement2();
 
     }
 
@@ -26,5 +26,16 @@ public class Paddle : MonoBehaviour
         float maxmovement = Mathf.Clamp(Input.mousePosition.x, maxleft, maxright);
         float worldxpos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)).x;
         this.transform.position = new Vector3(worldxpos, -4.5f, 0);
+    }
+
+    void movement2() {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.transform.Translate(-12f * Time.deltaTime,0,0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            this.transform.Translate(12f * Time.deltaTime,0,0);
+        }
     }
 }

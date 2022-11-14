@@ -5,9 +5,17 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody2D rb;
+    SpriteRenderer sprite;
+    public int countRed { get; set; }
+    public int countGreen { get; set; }
+    public int countBlue{get; set;} 
+    public int countBlocksDestroyed { get; set; }
+
+    public bool lost  { get; set; }
     // Start is called before the first frame update
     void Start()
     {
+        lost = false;
         
     }
 
@@ -17,8 +25,8 @@ public class Ball : MonoBehaviour
         Movement();
     }
 
-    void Movement() {
-        if (GameManager.startGame == true && GameManager.gamestarted == false)
+    public void Movement() {
+        if (GameManager.startGame && GameManager.gamestarted == false)
         {
             rb.AddForce(transform.up * 400f);
             rb.AddForce(transform.right * 250f);
@@ -28,15 +36,48 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Block") 
+        if (collision.gameObject.CompareTag("Red")) 
         {
-            Destroy(collision.gameObject);
+            if (gameObject != null)
+            {
+                sprite = gameObject.GetComponent<SpriteRenderer>();
+                countRed++;
+                countBlocksDestroyed++;
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.gameObject.CompareTag("Green"))
+        {
+            if (gameObject != null)
+            {
+                sprite = gameObject.GetComponent<SpriteRenderer>();
+                countGreen++;
+                countBlocksDestroyed++;
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.gameObject.CompareTag("Blue"))
+        {
+            if (gameObject != null)
+            {
+                sprite = gameObject.GetComponent<SpriteRenderer>();
+                countBlue++;
+                countBlocksDestroyed++;
+                Destroy(collision.gameObject);
+            }
         }
 
-        if (collision.gameObject.tag == "Losewall")
+        if (collision.gameObject.CompareTag("Losewall"))
         {
-            Destroy(this.gameObject);
+            lost = true;
+            if ( gameObject != null)
+            {
+                // Destroy(this.gameObject);
+                sprite = gameObject.GetComponent<SpriteRenderer>();
+                sprite.color = new Color(0f, 0f, 0f);
+            }
         }
+
 
 
     }

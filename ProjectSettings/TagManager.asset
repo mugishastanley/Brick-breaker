@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Block
   - Losewall
+  - Red
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX
