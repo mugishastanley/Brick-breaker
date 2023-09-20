@@ -1200,8 +1200,8 @@ MonoBehaviour:
   blockprefab: {fileID: 6111347256490877370, guid: d0cf76e6ea76b5d45b061dd88905573c, type: 3}
   paddle: {fileID: 825719875}
   EndScreen: {fileID: 1479391937}
-  _rows: 4
-  _cols: 14
+  _rows: 2
+  _cols: 6
   redScore: {fileID: 1826863509}
   greenScore: {fileID: 1820066690}
   blueScore: {fileID: 337350218}

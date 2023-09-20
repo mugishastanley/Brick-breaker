@@ -126,6 +126,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            
             var widthx = (Mathf.Abs(startx) + Mathf.Abs(stopx)) / _cols;
             var widthy = (Mathf.Abs(starty) + Mathf.Abs(stopy)) / _rows;
 

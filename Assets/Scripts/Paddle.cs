@@ -12,7 +12,7 @@ public class Paddle : MonoBehaviour
 
     void Start()
     {
-        mainCamera = FindObjectOfType<Camera>();
+        //mainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
